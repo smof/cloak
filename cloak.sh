@@ -1,5 +1,6 @@
 #!/bin/bash
 #Simon Moffatt April 2014 - basic file encryption suite using OpenSSL
+#https://github.com/smof/cloak
 
 #dependencies
 #check that jq util is present
@@ -52,11 +53,7 @@ function menu() {
 				echo ""			
 				exit
 				;;
-	
-		#[c] | [C])
 
-		#	config
-			#;;
 
 		*)
 
@@ -66,29 +63,6 @@ function menu() {
 
 }
 #main menu interface #################################################################################################################################################################################
-
-function split_file() {
-	
-			clear
-			echo "The following files exist in this directory:"
-			echo ""
-			ls
-			echo ""
-			echo "Enter the name of the file to split:"
-			read file_to_split
-			echo ""
-			echo "Enter the size of split files in MB:"
-			read split_size
-			echo ""
-			split  
-			echo ""
-			echo "Recovered file saved to $file_to_verify.recovered"
-			echo ""
-			read -p "Press [Enter] to return to menu"
-			menu
-			
-}
-
 
 function verify_recover() {
 	
