@@ -5,7 +5,7 @@
 #dependencies
 #check that jq util is present
 OPENSSL_LOC="$(which openssl)"
-if [ "$JQ_LOC" = "" ]; then
+if [ "$OPENSSL_LOC" = "" ]; then
    	echo "OpenSSL not found! Please install before running ./cloak.sh "
    	exit
 fi
